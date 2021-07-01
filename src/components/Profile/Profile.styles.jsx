@@ -1,5 +1,9 @@
 import styled from "@emotion/styled";
 
+export const Menu = styled.div`
+
+`;
+
 export const Avatar = styled.img`
 width: 100px;
 height: 100px;

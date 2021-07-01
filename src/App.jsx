@@ -1,16 +1,14 @@
 import Profile from "./components/Profile/Profile";
-import Paper from "./components/Paper/Paper";
-import './App.css';
-import user from "./data/user.json";
-import { Avatar, Name, Tag, Location, Stats, StatsItem } from "./components/Profile/Profile.styles";
 
+
+import { name, tag, location, avatar } from "./data/user.json";
+
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Profile>
-
-      </Profile>
+      <Profile avatar={avatar} name={name} tag={tag} location={location} />
     </div>
   );
 }
