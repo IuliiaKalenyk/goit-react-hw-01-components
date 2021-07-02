@@ -1,7 +1,7 @@
 import Profile from "./components/Profile/Profile";
-
-
 import { name, tag, location, avatar } from "./data/user.json";
+
+
 
 import './App.css';
 
@@ -14,6 +14,9 @@ function App() {
 }
 
 export default App;
+
+/* avatar={avatar} name={name} tag={tag} location={location} */
+
 /* import logo from './logo.svg';
 import './App.css';
 

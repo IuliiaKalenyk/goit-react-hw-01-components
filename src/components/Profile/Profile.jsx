@@ -1,39 +1,28 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import Paper from '../Paper/Paper';
-import { PaperContainer } from "../Paper/Paper.styles";
-import cardConfig from "../../utils/cardConfig";
-import { Avatar, Name, Tag, Location, Stats, StatsItem, Menu } from "./Profile.styles";
+import Rating from '../Rating/Rating';
+import { Avatar, Name, Tag, Location, Menuinfo, Menu } from "./Profile.styles";
 
-
-function Profile() {
-    return (<Paper gap={40}>
+function Profile({ avatar, name, tag, location }) {
+    return (
         <Menu>
-            {cardConfig.map(({ name, tag, location, avatar, followers, views, likes }) =>
-            (<Avatar key={name} src={avatar} alt="Аватар пользователя" />
-          <Name>{name}</Name>
-          <Tag>{tag}</Tag>
-          <Location>{location}</Location>
-          <Stats>
-              <StatsItem>{followers}</StatsItem>
-              <StatsItem>{views}</StatsItem>
-              <StatsItem>{likes}</StatsItem>
-           </Stats>))}
+            <Menuinfo>
+                <Avatar src={avatar} alt="Аватар пользователя" />
+                <Name>{name}</Name>
+                <Tag>@{tag}</Tag>
+                <Location>{location}</Location>
+            </Menuinfo>
+            <Rating />
         </Menu>
-    </Paper>)
+    );
 }
 
 Profile.propTypes = {
-    avatar: PropTypes.string,
+    avatar: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
-    followers: PropTypes.number.isRequired,
-    views: PropTypes.number.isRequired,
-    likes: PropTypes.number.isRequired,
 }
-
-
 export default Profile;
 
 
