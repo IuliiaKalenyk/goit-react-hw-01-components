@@ -1,6 +1,12 @@
 import Profile from "./components/Profile/Profile";
-import { name, tag, location, avatar } from "./data/user.json";
+import Statistics from "./components/Statistics/Statistics";
+import FriendList from "./components/FriendList/FriendList";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 
+import { name, tag, location, avatar } from "./data/user.json";
+import statsdata from "./data/statistical-data.json";
+import friends from "./data/friends.json";
+import transactions from "./data/transaction.json";
 
 
 import './App.css';
@@ -9,6 +15,9 @@ function App() {
   return (
     <div className="App">
       <Profile avatar={avatar} name={name} tag={tag} location={location} />
+      <Statistics title="Upload stats" stats={statsdata} />
+      <FriendList friends={friends} />
+      <TransactionHistory transactions={transactions} />
     </div>
   );
 }

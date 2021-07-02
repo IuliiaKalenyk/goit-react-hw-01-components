@@ -30,9 +30,3 @@ export const Location = styled.p`
 
     `;
 
-/* export const Stats = styled.ul`
-list - style: none;
-`;
-export const StatsItem = styled.li`
-
-    `; */
