@@ -2,14 +2,14 @@ import rating from '../data/user.json';
 export const ratingConfig = [
     {
         label: "Followers",
-        quantity: rating.followers,
+        quantity: rating.stats.followers,
     },
     {
         label: "Views",
-        quantity: rating.views,
+        quantity: rating.stats.views,
     },
     {
         label: "Likes",
-        quantity: rating.likes,
+        quantity: rating.stats.likes,
     }
 ]
